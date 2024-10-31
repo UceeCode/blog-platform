@@ -1,12 +1,13 @@
-<%- include('layout.ejs') %>
-<h2>SignUp</h2>
+<%- include('layout') %>
+
+<h2>Sign Up</h2>
 <form action="/signup" method="POST">
     <div class="form-group">
-        <label for="name">FirstName:</label>
+        <label for="firstname">First Name:</label>
         <input type="text" class="form-control" id="firstname" name="firstname" required>
     </div>
     <div class="form-group">
-        <label for="name">LastName:</label>
+        <label for="lastname">Last Name:</label>
         <input type="text" class="form-control" id="lastname" name="lastname" required>
     </div>
     <div class="form-group">

@@ -1,4 +1,5 @@
-<%- include('layout.ejs') %>
+<%- include('layout') %>
+
 <h2><%= post ? 'Edit Post' : 'New Post' %></h2>
 <form action="<%= post ? '/posts/edit/' + post._id : '/posts' %>" method="POST">
     <div class="form-group">

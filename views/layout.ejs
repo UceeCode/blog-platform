@@ -5,17 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Platform</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        .navbar {
+            margin-bottom: 20px;
+            background-color: #f8f9fa; /* Light background color */
+            padding: 10px 20px; /* Add some padding */
+            border-bottom: 1px solid #dee2e6; /* Light border */
+        }
+        .navbar-brand {
+            font-size: 1.5rem; /* Logo font size */
+            font-weight: bold; /* Logo font weight */
+        }
+        .nav-link {
+            margin-left: 15px; /* Space between links */
+            font-size: 1.1rem; /* Font size for links */
+        }
+        .links {
+            display: flex;
+            margin: 15px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1>My Blog</h1>
-        <nav>
-            <a href="/signup">Sign Up</a>
-            <a href="/login">Login</a>
-            <a href="/posts/new">New Post</a>
-            <a href="/logout">Logout</a>
+        <nav class="navbar d-flex justify-content-between align-items-center">
+            <a class="navbar-brand" href="/">My Blog</a>
+            <div class="links">
+                <a class="nav-link" href="/signup">Sign Up</a>
+                <a class="nav-link" href="/login">Login</a>
+                <a class="nav-link" href="/posts/new">New Post</a>
+                <a class="nav-link" href="/logout">Logout</a>
+            </div>
         </nav>
-        <%- body %>
+        <div class="content">
+            <%- content %>
+        </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>

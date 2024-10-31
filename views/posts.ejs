@@ -1,4 +1,5 @@
-<%- include('layout.ejs') %>
+<%- include('layout') %>
+
 <h2>All Posts</h2>
 <ul>
     <% posts.forEach(post => { %>
@@ -8,7 +9,7 @@
             <p>By <%= post.user.name %></p>
             <a href="/posts/edit/<%= post._id %>">Edit</a>
             <form action="/posts/delete/<%= post._id %>" method="POST" style="display:inline;">
-                <button type="submit">Delete</button>
+                <button type="submit" class="btn btn-danger">Delete</button>
             </form>
         </li>
     <% }) %>
