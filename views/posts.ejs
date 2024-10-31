@@ -1,0 +1,15 @@
+<%- include('layout.ejs') %>
+<h2>All Posts</h2>
+<ul>
+    <% posts.forEach(post => { %>
+        <li>
+            <h3><%= post.title %></h3>
+            <p><%= post.content %></p>
+            <p>By <%= post.user.name %></p>
+            <a href="/posts/edit/<%= post._id %>">Edit</a>
+            <form action="/posts/delete/<%= post._id %>" method="POST" style="display:inline;">
+                <button type="submit">Delete</button>
+            </form>
+        </li>
+    <% }) %>
+</ul>
